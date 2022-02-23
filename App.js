@@ -1,14 +1,16 @@
 import React, { Component, useState } from 'react';
-import {CheckBox, Text, View, KeyboardAvoidingView, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
+import {CheckBox, Text, View, KeyboardAvoidingView, TextInput, StyleSheet, TouchableOpacity}from 'react-native';
 
-export default function LoginScreen () {                
+export default function LoginScreen () {   
+
   const [isSelected, setSelection] = useState(false);
+
     return (
       <KeyboardAvoidingView style={styles.container02}>
         <View>
 
-          <Text style={styles.meuapp}>MEU APP</Text>
-          <Text style={styles.vocemaislonge}>vocemaislonge</Text>
+          <Text style={styles.title}>MEU APP</Text>
+          <Text style={styles.subtitle}>Aventure-se!</Text>
 
           <TextInput
           style={styles.inputemail}
@@ -50,12 +52,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white"
   },
-  meuapp: {
+  title: {
+    marginLeft: 62,
     top: -100,
     left: 57,
     fontSize: 36
   },
-  vocemaislonge: {
+  subtitle: {
+    marginLeft: 67,
     top: -110,
     fontSize: 24,
     left: 72
@@ -63,6 +67,7 @@ const styles = StyleSheet.create({
   inputemail: {
     width: 275,
     height: 42,
+    marginTop: 38,
     padding: 10,
     fontSize: 16,
     fontWeight: "bold",
